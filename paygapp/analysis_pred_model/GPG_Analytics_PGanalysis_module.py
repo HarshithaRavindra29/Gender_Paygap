@@ -5,7 +5,7 @@ Created on Thu Apr 19 14:40:56 2018
 @author: Harshitha R
 """
 
-import os
+#import os
 import pandas as pd
 import numpy as np
 from sklearn import linear_model as lm
@@ -15,8 +15,8 @@ import statsmodels.api as sm
 #os.chdir("C:\Users\User\Desktop\GPG\Test_data")
 
 
-employee_data = pd.read_csv("Glass_Door_data.csv")
-GPG_threshold = 3  
+employee_data = pd.read_csv("C:\Users\harshitha\Documents\GitHub\Gender_Paygap\uploads\Glass_Door_data.csv")
+GPG_threshold = 0 
 
 def PG_analysis(employee_data,GPG_threshold):
 
@@ -124,4 +124,4 @@ def PG_analysis(employee_data,GPG_threshold):
     Pay_gap_table_stats = Full_summary[['jobTitle','Pay_gap_comment','median_Female_sal','median_male_sal','male_Emp_count','Female_Emp_count']]   
     return Pay_gap_graph_names,Pay_gap_graph_values,Pay_gap_table_stats,Final_comment
 
-#Pay_gap_graph_names,Pay_gap_graph_values,Pay_gap_table_stats,Final_comment = PG_analysis(employee_data,GPG_threshold)
+Pay_gap_graph_names,Pay_gap_graph_values,Pay_gap_table_stats,Final_comment = PG_analysis(employee_data,GPG_threshold)
